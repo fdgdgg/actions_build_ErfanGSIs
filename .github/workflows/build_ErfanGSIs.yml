@@ -59,15 +59,16 @@ jobs:
               cd /home/runner/work/actions_build_ErfanGSIs/actions_build_ErfanGSIs
               mkdir final
               7z a -t7z -r final/GSI_AB.7z ErfanGSIs/output/*AB*
+
+        - name: Upload GSI_AB to WeTransfer
+         run: |
+              curl -sL https://git.io/file-transfer | sh
+              ./transfer wet final/GSI_AB.7z
+    
        
        - name: 7zip GSI_Aonly  
          run: |
               7z a -t7z -r final/GSI_Aonly.7z ErfanGSIs/output/*Aonly*
-       
-       - name: Upload GSI_AB to WeTransfer
-         run: |
-              curl -sL https://git.io/file-transfer | sh
-              ./transfer wet final/GSI_AB.7z
     
        - name: Upload GSI_Aonly to WeTransfer
          run: |
