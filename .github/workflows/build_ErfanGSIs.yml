@@ -62,7 +62,7 @@ jobs:
        
        - name: 7zip GSI_Aonly  
          run: |
-              7z -t7z -r final/GSI_Aonly.7z ErfanGSIs/output/*Aonly*
+              7z a -t7z -r final/GSI_Aonly.7z ErfanGSIs/output/*Aonly*
        
        - name: Upload GSI_AB to WeTransfer
          run: |
