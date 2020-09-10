@@ -53,22 +53,23 @@ jobs:
        - name: Download Stock Rom & Generate GSI
          run: sudo ./ErfanGSIs/url2GSI.sh $ROM_URL $ROM_NAME
        
-       - name: Zip GSI_AB  
+       - name: 7zip GSI_AB  
          run: |
+              sudo apt-get install p7zip
               cd /home/runner/work/actions_build_ErfanGSIs/actions_build_ErfanGSIs
               mkdir final
-              zip -r final/GSI_AB.zip ErfanGSIs/output/*AB*
+              7z a -t7z -r final/GSI_AB.7z ErfanGSIs/output/*AB*
        
-       - name: Zip GSI_Aonly  
+       - name: 7zip GSI_Aonly  
          run: |
-              zip -r final/GSI_Aonly.zip ErfanGSIs/output/*Aonly*
+              7z -t7z -r final/GSI_Aonly.7z ErfanGSIs/output/*Aonly*
        
        - name: Upload GSI_AB to WeTransfer
          run: |
               curl -sL https://git.io/file-transfer | sh
-              ./transfer wet final/GSI_AB.zip
+              ./transfer wet final/GSI_AB.7z
     
        - name: Upload GSI_Aonly to WeTransfer
          run: |
-              ./transfer wet final/GSI_Aonly.zip  
+              ./transfer wet final/GSI_Aonly.7z 
             
