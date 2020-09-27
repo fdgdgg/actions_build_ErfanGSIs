@@ -14,8 +14,8 @@ on:
     types: [started]
     
 env:
-  ROM_URL: https://download.c.realme.com/osupdate/RMX1901_11_OTA_1120_all_5fcT8erEU2dx.ozip
-  ROM_NAME: MIUI
+  ROM_URL: https://doc-14-74-docs.googleusercontent.com/docs/securesc/qjbtn09m5607muo98732a7dg2j71akpr/d6vdikj8h4cht2369m3hpt43u3rsss1u/1601182500000/10275588129933848950/13061163785555691354/1PlWh5V-bRjnEL34S7YW-HZ-QWFgqqiY0?e=download&authuser=0&nonce=a0ds286nb16b4&user=13061163785555691354&hash=49a96irvimo351p1hn9e96grj08r9m2g
+  ROM_NAME: moto
   TZ: Asia/Shanghai
 
 jobs:
